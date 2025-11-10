@@ -1,0 +1,35 @@
+{
+  "name": "slidev-theme-nord",
+  "version": "0.1.0",
+  "description": "Nord theme for Slidev - An arctic, north-bluish color palette",
+  "author": "Mark (with Claude)",
+  "license": "MIT",
+  "keywords": [
+    "slidev-theme",
+    "slidev",
+    "nord",
+    "nord theme",
+    "dark theme",
+    "theme"
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "slidev": ">=v0.47.0"
+  },
+  "slidev": {
+    "colorSchema": "both",
+    "highlighter": "shiki",
+    "defaults": {
+      "fonts": {
+        "mono": "Fira Code",
+        "sans": "Inter,Nunito Sans",
+        "local": "Inter"
+      }
+    }
+  },
+  "dependencies": {
+    "@slidev/types": "^0.47.0",
+    "codemirror-theme-vars": "^0.1.2",
+    "prism-theme-vars": "^0.2.4"
+  }
+}

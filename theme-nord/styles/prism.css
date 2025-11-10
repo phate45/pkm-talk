@@ -1,0 +1,62 @@
+@import 'prism-theme-vars/base.css';
+@import 'codemirror-theme-vars/base.css';
+@import 'prism-theme-vars/to-codemirror.css';
+
+:root {
+  --prism-font-family: var(--slidev-code-font-family);
+  --prism-background: var(--slidev-code-background);
+}
+
+html:not(.dark) {
+  /* Nord Light syntax highlighting */
+  --prism-foreground: #2e3440;        /* nord0 - dark text */
+  --prism-background: #e5e9f0;        /* nord5 - light code background */
+  --prism-comment: #4c566a;           /* nord3 - comments */
+  --prism-string: #8ba176;            /* Darker green for contrast */
+  --prism-literal: #5e81ac;           /* nord10 - literals */
+  --prism-keyword: #5e81ac;           /* nord10 - keywords */
+  --prism-boolean: #5e81ac;           /* nord10 - booleans */
+  --prism-number: #b48ead;            /* nord15 - numbers */
+  --prism-variable: #2e3440;          /* nord0 - variables */
+  --prism-function: #5e81ac;          /* nord10 - functions */
+  --prism-deleted: #bf616a;           /* nord11 - deletions */
+  --prism-class: #5e81ac;             /* nord10 - classes */
+  --prism-builtin: #5e81ac;           /* nord10 - builtins */
+  --prism-property: #2e3440;          /* nord0 - properties */
+  --prism-namespace: #5e81ac;         /* nord10 - namespaces */
+  --prism-punctuation: #4c566a;       /* nord3 - punctuation */
+  --prism-decorator: #d08770;         /* nord12 - decorators */
+  --prism-regex: #d08f65;             /* Darker yellow for contrast */
+  --prism-json-property: #5e81ac;     /* nord10 - JSON properties */
+  --prism-line-number: #4c566a;       /* nord3 */
+  --prism-line-number-gutter: #eceff4;/* nord6 */
+  --prism-line-highlight-background: #d8dee9; /* nord4 */
+  --prism-selection-background: #d8dee9;      /* nord4 */
+}
+
+html.dark {
+  /* Nord syntax highlighting */
+  --prism-foreground: #d8dee9;        /* nord4 - base text */
+  --prism-background: #3b4252;        /* nord1 - code background */
+  --prism-comment: #4c566a;           /* nord3 - comments */
+  --prism-string: #a3be8c;            /* nord14 - strings */
+  --prism-literal: #88c0d0;           /* nord8 - literals */
+  --prism-keyword: #81a1c1;           /* nord9 - keywords */
+  --prism-boolean: #81a1c1;           /* nord9 - booleans */
+  --prism-number: #b48ead;            /* nord15 - numbers */
+  --prism-variable: #d8dee9;          /* nord4 - variables */
+  --prism-function: #88c0d0;          /* nord8 - functions */
+  --prism-deleted: #bf616a;           /* nord11 - deletions */
+  --prism-class: #8fbcbb;             /* nord7 - classes */
+  --prism-builtin: #81a1c1;           /* nord9 - builtins */
+  --prism-property: #d8dee9;          /* nord4 - properties */
+  --prism-namespace: #8fbcbb;         /* nord7 - namespaces */
+  --prism-punctuation: #eceff4;       /* nord6 - punctuation */
+  --prism-decorator: #d08770;         /* nord12 - decorators */
+  --prism-regex: #ebcb8b;             /* nord13 - regex */
+  --prism-json-property: #8fbcbb;     /* nord7 - JSON properties */
+  --prism-line-number: #4c566a;       /* nord3 */
+  --prism-line-number-gutter: #2e3440;/* nord0 */
+  --prism-line-highlight-background: #434c5e; /* nord2 */
+  --prism-selection-background: #434c5e;      /* nord2 */
+}

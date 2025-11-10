@@ -1,0 +1,241 @@
+/* Nord Color Palette
+ * Based on https://www.nordtheme.com/docs/colors-and-palettes
+ */
+
+:root {
+  /* Polar Night - Dark backgrounds */
+  --nord0: #2e3440;
+  --nord1: #3b4252;
+  --nord2: #434c5e;
+  --nord3: #4c566a;
+
+  /* Snow Storm - Light text/backgrounds */
+  --nord4: #d8dee9;
+  --nord5: #e5e9f0;
+  --nord6: #eceff4;
+
+  /* Frost - Blue/Cyan accents */
+  --nord7: #8fbcbb;
+  --nord8: #88c0d0;
+  --nord9: #81a1c1;
+  --nord10: #5e81ac;
+
+  /* Aurora - Color accents */
+  --nord11: #bf616a; /* Red */
+  --nord12: #d08770; /* Orange */
+  --nord13: #ebcb8b; /* Yellow */
+  --nord14: #a3be8c; /* Green */
+  --nord15: #b48ead; /* Purple */
+}
+
+/* Light mode semantic mappings */
+html:not(.dark) {
+  --nord-background: var(--nord6);
+  --nord-background-elevated: var(--nord5);
+  --nord-background-highlight: var(--nord4);
+  --nord-foreground: var(--nord0);
+  --nord-foreground-dim: var(--nord3);
+  --nord-foreground-bright: var(--nord1);
+  --nord-comment: var(--nord3);
+  --nord-cyan: var(--nord9);
+  --nord-blue-bright: var(--nord10);
+  --nord-blue: var(--nord9);
+  --nord-blue-dark: var(--nord10);
+  --nord-red: var(--nord11);
+  --nord-orange: var(--nord12);
+  --nord-yellow: #d08f65; /* Darker yellow for better contrast */
+  --nord-green: #8ba176; /* Darker green for better contrast */
+  --nord-purple: var(--nord15);
+}
+
+/* Dark mode semantic mappings */
+html.dark {
+  --nord-background: var(--nord0);
+  --nord-background-elevated: var(--nord1);
+  --nord-background-highlight: var(--nord2);
+  --nord-foreground: var(--nord4);
+  --nord-foreground-dim: var(--nord3);
+  --nord-foreground-bright: var(--nord6);
+  --nord-comment: var(--nord3);
+  --nord-cyan: var(--nord7);
+  --nord-blue-bright: var(--nord8);
+  --nord-blue: var(--nord9);
+  --nord-blue-dark: var(--nord10);
+  --nord-red: var(--nord11);
+  --nord-orange: var(--nord12);
+  --nord-yellow: var(--nord13);
+  --nord-green: var(--nord14);
+  --nord-purple: var(--nord15);
+}
+
+/* Apply Nord theme to slides */
+#app {
+  #slide-content {
+    --at-apply: text-$nord-foreground bg-$nord-background !important;
+
+    /* Headings */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      --at-apply: text-$nord-blue-bright;
+    }
+
+    /* H1: Main slide titles - subtle border bottom */
+    h1 {
+      --at-apply: pb-2;
+      border-bottom: 2px solid var(--nord-blue);
+      letter-spacing: -0.02em;
+    }
+
+    /* H2: Section headings - lighter accent */
+    h2 {
+      --at-apply: text-$nord-cyan pb-1;
+      border-bottom: 1px solid var(--nord3);
+      letter-spacing: -0.01em;
+    }
+
+    /* H3: Subsection headings - no border, different color */
+    h3 {
+      --at-apply: text-$nord-blue pb-1;
+      font-weight: 600;
+    }
+
+    /* Text emphasis */
+    strong {
+      --at-apply: text-$nord-orange;
+    }
+
+    em {
+      --at-apply: text-$nord-yellow;
+    }
+
+    /* Links */
+    a {
+      --at-apply: text-$nord-cyan;
+    }
+
+    a:hover {
+      --at-apply: text-$nord-blue-bright;
+    }
+
+    /* Lists */
+    ul,
+    ol {
+      li::marker {
+        --at-apply: text-$nord-blue;
+      }
+    }
+
+    /* Blockquotes */
+    blockquote {
+      --at-apply: bg-transparent text-$nord-yellow border-l-4 border-$nord-yellow pl-4;
+      font-style: italic;
+    }
+
+    /* Keyboard shortcuts */
+    kbd {
+      --at-apply: text-$nord-green bg-$nord-background-elevated px-2 py-1 rounded;
+    }
+
+    /* Inline code */
+    :not(pre) > code {
+      --at-apply: bg-$nord-background-elevated text-$nord-green px-1.5 py-0.5 rounded;
+    }
+
+    /* Code blocks */
+    .slidev-code.shiki {
+      --at-apply: border border-$nord-background-highlight;
+    }
+
+    /* Tables */
+    table {
+      th {
+        --at-apply: bg-$nord-background-elevated text-$nord-blue-bright;
+      }
+
+      tr:hover {
+        --at-apply: bg-$nord-background-elevated;
+      }
+
+      border-color: var(--nord-background-highlight);
+    }
+  }
+
+  /* Layout: Author */
+  .slidev-layout.author {
+    img {
+      --at-apply: rounded-full mx-auto border-4 border-$nord-blue;
+    }
+
+    h1 {
+      --at-apply: text-3xl font-600 mb-0;
+    }
+
+    h1 + p {
+      --at-apply: max-w-40ch mx-auto text-$nord-foreground;
+    }
+
+    footer {
+      --at-apply: pt-16 text-sm flex justify-center items-center;
+
+      a {
+        --at-apply: ms-2 me-6;
+      }
+
+      a:not(:hover) {
+        color: inherit !important;
+      }
+    }
+  }
+
+  /* Layout: Cover, Intro */
+  .slidev-layout.cover,
+  .slidev-layout.intro {
+    h1 {
+      --at-apply: text-$nord-blue-bright;
+    }
+
+    h1 + p {
+      --at-apply: text-$nord-comment;
+    }
+  }
+
+  /* Layout: Fact */
+  .slidev-layout.fact {
+    h1 {
+      --at-apply: text-$nord-purple;
+    }
+
+    h1 + p {
+      --at-apply: text-$nord-blue-bright;
+    }
+  }
+
+  /* Layout: Statement */
+  .slidev-layout.statement {
+    h1 {
+      --at-apply: text-$nord-blue-bright;
+    }
+  }
+
+  /* Layout: Section */
+  .slidev-layout.section {
+    h1 {
+      --at-apply: text-$nord-blue-bright;
+    }
+  }
+
+  /* Layout: Quote */
+  .slidev-layout.quote {
+    h1 {
+      --at-apply: text-$nord-yellow;
+    }
+
+    h1 + p {
+      --at-apply: text-$nord-foreground;
+    }
+  }
+}
