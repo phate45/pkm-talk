@@ -11,5 +11,14 @@ else
     sed -i ':a;N;$!ba;s/GitHub"\n/GitHub"/g' /slidev/slides.md
 fi
 
+# Install theme dependencies if needed
+if [ -d /slidev/theme-nord ] && [ ! -d /slidev/theme-nord/node_modules ]; then
+    echo "Installing theme dependencies (one-time setup)..."
+    cd /slidev/theme-nord
+    npm install --silent
+    cd /slidev
+    echo "Theme dependencies installed."
+fi
+
 echo "Starting Slidev..."
 exec npx slidev --remote
