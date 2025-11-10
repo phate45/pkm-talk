@@ -273,7 +273,7 @@ transition: slide-up
 
 # Proč mě to zajímá
 
-*Od chaosu prostého textu k systémovému přístupu*
+*Od chaosu čistého textu k systémovému přístupu*
 
 <!--
 TIMING: 5 minutes (Why It Matters)
@@ -285,90 +285,65 @@ This is personal journey setup. Humble beginnings.
 transition: slide-up
 ---
 
-# Moje první "poznámky"
+# Od chaosu k poučení
 
-<div class="grid grid-cols-2 gap-8">
+<div class="grid grid-cols-[45fr_55fr] gap-8">
 
 <div>
 
-## 2015: Náhodné .txt soubory
+## Před několika lety: Náhodné .txt soubory
 
 ```
-Projekty/notes.txt
-Dokumenty/poznamky.txt
-poznamky_final.txt (na flashce)
-poznamky_final_FINAL.txt
-co_kdyby.txt
-D:/Zaloha/code_snippets.txt
+Projekty/TODO.txt
+Dokumenty/Škola/poznamky_<prědmět>.txt
+noticky_prace.txt (na flashce)
+D:/Zaloha/notes.txt (měsíc staré)
 ```
 
-<div class="mt-4">
-<b>Problém:</b> Nejde najít vůbec nic
+<div class="mt-6 text-xl font-bold" style="color: #bf616a;">
+Problém: Nejde najít vůbec nic
 </div>
 
 </div>
 
 <div>
 
-## Spouštěcí moment
+<v-click>
+
+## Moment prozření
 
 Při přípravě na zkoušku jsem strávil **3 hodiny** hledáním poznámek, o kterých jsem věděl, že jsem je napsal.
 
-Našel jsem je, nakonec...<br />
-v `D:/.../Poznamky/notes.txt`
-
-</div>
-
-</div>
-
-<div class="mt-6 text-2xl font-bold text-center" style="color: #a3be8c;" v-click>
-<div>Tehdy mi došlo: Potřebuju systém.</div>
-</div>
-
-<!--
-Self-deprecating. "I was not organized. I'm STILL not naturally organized."
-
-"But I realized my brain is volatile memory. I needed persistent storage."
-
-Transition to first real system attempt.
--->
-
----
-transition: slide-left
----
-
-# První pokusy o strukturu
-
-<div class="text-2xl leading-relaxed">
-
-**Pokus 1:** Organizované složky
-- Fungovalo týden
-- Rozpadlo se, když se kategorie překrývaly
-- "Je tahle poznámka o Pythonu nebo databázích?"
-
-<v-click>
-
-**Pokus 2:** Všechno označkovat tagy
-- Vytvořil hromadu tagů
-- Žádný tag neměl víc než 3 poznámky
-- Analysis paralysis
-
 </v-click>
 
-<v-click>
+<div class="mt-8 p-6 rounded-lg border-2" style="background-color: rgba(163, 190, 140, 0.15); border-color: rgba(163, 190, 140, 0.3);" v-click="2">
 
-**Poučení:** *Z problému se nedostaneš jen tak organizací. Potřebuješ nástroje, které které ladí s tím, jak přemýšlíš.*
+### Co jsem se naučil
 
-</v-click>
+Z problému se nedostaneš jen organizací.
+
+Potřebuješ **nástroje, které ladí s tím, jak přemýšlíš**.
+
+A prostý text + vyhledávání + odkazy je 80 % řešení.
+
+</div>
+
+</div>
 
 </div>
 
 <!--
-"Anyone else tried to organize their way to success and failed?"
+TIMING: 2-3 minutes
 
-The lesson: tools matter. But also, systems matter.
+Self-deprecating tone: "I was not organized. I'm STILL not naturally organized."
 
-Transition: "So I started looking for tools that actually fit developer workflows..."
+Walk through the chaos → trigger moment (3-hour search) → knee-jerk attempts (folders, tags) → real lesson.
+
+The lesson: Don't just organize harder. Find tools that match developer brain (plaintext, grep, links).
+
+Emphasize: "The 3-hour search was my 'I will never let this happen again' moment."
+
+Transition: "So I started looking for tools that actually fit how developers think..."
 -->
 
 ---
@@ -826,7 +801,7 @@ transition: slide-up
 
 <div class="mt-8 text-xl font-bold" style="color: #a3be8c;">
 
-> Sofistikovanost se vyvine používáním, ne z plánování.
+> Sofistikovanost se vyvine používáním, ne plánováním.
 
 </div>
 
@@ -903,7 +878,7 @@ Hotkey na vložení. Bez zbytečného klikání.
 
 <v-click>
 
-### 2. Použij pohled na graf jako motivaci
+### 2. Pohled na graf jako motivace
 Sledování růstu grafu je fakt návykové.
 
 Malý dopaminový hit pokaždé, když přidáš propojenou poznámku.
@@ -926,9 +901,10 @@ Sladí se to s vývojářskou svalovou pamětí
 <v-click>
 
 ### 4. Nauč se základní WikiLink syntaxi, zbytek ignoruj
-`[[Název poznámky]]` vytvoří odkaz. To je 80 % síly.
+`[[Název poznámky]]` vytvoří odkaz.  
+To je 80 % síly.
 
-Embedding, tagy, aliasy, bloky - nauč se později.
+Tagy, aliasy, bloky, přílohy, vkládání souboru do souboru - nauč se později.
 
 </v-click>
 
