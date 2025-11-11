@@ -20,6 +20,15 @@ All tools, books, methodologies, and resources mentioned in this presentation ar
 - 67 external resources across 10 categories
 - Direct links to tools, books, communities, and tutorials
 
+## 📄 PDF Exports
+
+Pre-built PDF exports are available for offline viewing or printing:
+
+- **[slides-dark.pdf](./slides-dark.pdf)** - Dark mode version (3.4 MB)
+- **[slides-light.pdf](./slides-light.pdf)** - Light mode version (3.5 MB)
+
+Note: There are some errors with the exports (the feature is experimental). For the full text, check out the raw [slides.md](./slides.md), or run the full presentation.
+
 ---
 
 ## 🚀 Running the Presentation
